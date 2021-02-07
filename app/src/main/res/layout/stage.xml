@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/first_stage"
+    android:background="@drawable/house">
+
+        <ImageView
+            android:id="@+id/cental_window"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/window" />
+
+        <ImageView
+            android:id="@+id/left_window"
+            android:layout_width="48dp"
+            android:layout_height="58dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/cental_window"
+            android:src="@drawable/window" />
+
+        <ImageView
+            android:id="@+id/right"
+            android:layout_width="48dp"
+            android:layout_height="58dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cental_window"
+            android:src="@drawable/window" />
+
+    </RelativeLayout>

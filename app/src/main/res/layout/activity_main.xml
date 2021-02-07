@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/roof"
+        android:layout_width="300dp"
+        android:layout_height="154dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roof"
+        app:layout_constraintBottom_toTopOf="@+id/fifth_stage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/windowRoof"
+            android:layout_width="48dp"
+            android:layout_height="58dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="71dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/window"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+    <include
+        android:id="@+id/fifth_stage"
+        layout="@layout/stage"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/first_stage"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toTopOf="@+id/fourth_stage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/fourth_stage"
+        layout="@layout/stage"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/first_stage"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toTopOf="@+id/third_stage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+    <include
+        android:id="@+id/third_stage"
+        layout="@layout/stage"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/first_stage"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toTopOf="@+id/second_stage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/second_stage"
+        layout="@layout/stage"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/third_stage"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toTopOf="@+id/first_stage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/toolbox"
+        layout="@layout/toolbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+
+        android:id="@+id/first_stage"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:background="@drawable/house"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/door"
+            android:layout_width="74dp"
+            android:layout_height="116dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/door" />
+
+        <ImageView
+            android:id="@+id/left_window"
+            android:layout_width="48dp"
+            android:layout_height="58dp"
+            android:layout_margin="16dp"
+            android:layout_toLeftOf="@+id/door"
+            android:src="@drawable/window" />
+
+        <ImageView
+            android:id="@+id/right"
+            android:layout_width="48dp"
+            android:layout_height="58dp"
+            android:layout_margin="16dp"
+            android:layout_toRightOf="@id/door"
+            android:src="@drawable/window" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lyt_instr"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:gravity="right"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:onClick="showSettings"
+            android:src="@drawable/settings"/>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
